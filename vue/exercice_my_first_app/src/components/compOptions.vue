@@ -3,7 +3,7 @@ export default {
     name: "CompOptions",
     props : {
         msg: String,
-        //numb: Number
+        numb: Number
     },
     data() {
         return {
@@ -22,12 +22,11 @@ export default {
 <template>
     <div>
         <p>message : {{ msg }}</p>
-        <hr>
+        <br>
         <p>le nombre choisi est : {{numb}}</p>
-        <input v-model="numb" placeholder="nombre entier"/>
-        <hr>
+        <br>
         <p>count : {{count}}</p>
-        <hr>
+        <br>
         <button @click="multiple(numb)">multiplier</button>
         <button @click="count=1">RESET</button>
     </div>
