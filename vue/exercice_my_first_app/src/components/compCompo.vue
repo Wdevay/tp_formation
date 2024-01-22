@@ -1,8 +1,11 @@
 <script setup>
+import {ref} from 'vue'
 defineProps({
-    msg: String,
-    numb: Number
+    msg2: String,
+    // numb2: Number
 })
+const count2 = ref(1)
+function mult(num) { this.count2 = this.count2 * num }
 
 
 </script>
@@ -11,12 +14,14 @@ defineProps({
 
 <template>
     <div>
-        <p>message : {{ msg }}</p>
+        <p>message : {{ msg2 }}</p>
         <hr>
-        <p>le nombre choisi est : {{numb}}</p>
+        <p>le nombre choisi est : {{numb2}}</p>
+        <input v-model="numb2" placeholder="nombre entier"/>
         <hr>
-        <p>count : {{count}}</p>
+        <p>count : {{count2}}</p>
         <hr>
-        <button @click="multiple(numb)">multiplier</button>
+        <button @click="mult(numb2)">multiplier</button>
+        <button @click="count2=1">RESET</button>
     </div>
 </template>
