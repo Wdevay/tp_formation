@@ -5,7 +5,7 @@ defineProps({
     numb: Number
 })
 const count2 = ref(1)
-function mult(num) { this.count2 = this.count2 * num }
+function mult(num) {this.count2 = this.count2 * num }
 
 
 </script>
@@ -13,13 +13,9 @@ function mult(num) { this.count2 = this.count2 * num }
 <template>
     <div>
         <p>message : {{ msg2 }}</p>
-        <br>
         <p>le nombre choisi est : {{numb}}</p>
-        
-        <br>
         <p>count : {{count2}}</p>
-        <br>
-        <button @click="mult(numb)">multiplier</button>
+        <button @click="mult(numb)">multiplier par {{ numb }}</button>
         <button @click="count2=1">RESET</button>
     </div>
 </template>
