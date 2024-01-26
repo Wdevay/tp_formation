@@ -11,7 +11,7 @@ export default {
     MainLayout,
     MainNav,
     ProductsTable
-  },
+  },  
   /* Utilisation d'un hook du cycle de vie du composant */
   updated() {
     console.log(this.name)
